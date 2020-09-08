@@ -3,9 +3,15 @@
   width: 150px;
   padding: 10px;
 }
-.card:hover .card-body {
+
+.card.turned .card-body {
   transform: rotateY(180deg);
 }
+
+.card .card-body {
+  transform: rotateY(0deg);
+}
+
 .card-body {
   position: relative;
   width: 100%;
