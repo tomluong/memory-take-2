@@ -1,0 +1,45 @@
+.card {
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+}
+.card:hover .card-body {
+  transform: rotateY(180deg);
+}
+.card-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* safari */
+}
+
+.card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  transform: rotateY(180deg);
+  background-color: #ffe5d9;
+}
+
+.card-front .word {
+  font-weight: 700;
+}
+.card-front .meaning {
+  font-size: 10px;
+}
+
+.card-back {
+  background-color: #f4acb7;
+}
